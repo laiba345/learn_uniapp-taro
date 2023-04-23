@@ -10,7 +10,7 @@
 		 2. 重写button的样式( 条件编译 )		
 		-->
 		<button type="primary">4.我是一个button</button>
-		
+
 		<!-- 图片 -->
 		<!-- 相对路径 -->
 		<!-- <image src="../../static/images/cvy.png" mode="widthFix"></image> -->
@@ -19,7 +19,7 @@
 		<!-- 导入的图片 -->
 		<image class="image" :src="cvy" mode="widthFix"></image>
 		<!-- base64 字符串 -->
-		
+
 		<scroll-view scroll-y="true" class="hy-v-scroll">
 			<view class="v-item">item1</view>
 			<view class="v-item">item2</view>
@@ -29,7 +29,7 @@
 			<view class="v-item">item6</view>
 			<view class="v-item">item7</view>
 		</scroll-view>
-		
+		<!-- show-scrollbar是否隐藏滚动条 -->
 		<scroll-view scroll-x="true" class="hy-h-scroll" :show-scrollbar="false">
 			<view class="h-item">item1</view>
 			<view class="h-item">item2</view>
@@ -39,23 +39,16 @@
 			<view class="h-item">item6</view>
 			<view class="h-item">item7</view>
 		</scroll-view>
-		
-		<swiper 
-			class="hy-swiper"
-			:indicator-dots="true" 
-			indicator-active-color="#ff8198"
-			indicator-color="#f8f8f8"
-			:autoplay="true" 
-			:interval="3000" :duration="1000">
+
+		<swiper class="hy-swiper" :indicator-dots="true" indicator-active-color="#ff8198" indicator-color="#f8f8f8"
+			:autoplay="true" :interval="3000" :duration="1000">
 			<swiper-item>
-				<image class="swiper-image" src="@/static/images/banner/banner01.jpeg" ></image>
+				<image class="swiper-image" src="@/static/images/banner/banner01.jpeg"></image>
 			</swiper-item>
 			<swiper-item>
 				<image class="swiper-image" src="@/static/images/banner/banner02.jpeg"></image>
 			</swiper-item>
 		</swiper>
-		
-		
 	</view>
 </template>
 
@@ -78,50 +71,50 @@
 </script>
 
 <style lang="scss">
-	.image{
+	.image {
 		width: 200rpx;
 	}
-	.hy-v-scroll{
+
+	.hy-v-scroll {
 		height: 400rpx;
 		border: 2rpx solid red;
 		box-sizing: border-box;
-		.v-item{
+
+		.v-item {
 			height: 200rpx;
 			border-bottom: 2rpx solid blue;
 		}
 	}
-	
+
 
 	// 局部样式
-	.hy-h-scroll{
+	.hy-h-scroll {
 		white-space: nowrap;
 		// 隐藏原生实现的滚动条
 		// &::webkit-scrollbar{
 		// 	display: none;
 		// }
-		
+
 		// 编写全局样式
 		// :global()
-		:deep(.hy-h-scroll .uni-scroll-view::-webkit-scrollbar){
+		:deep(.hy-h-scroll .uni-scroll-view::-webkit-scrollbar) {
 			display: none;
 		}
-	
-		.h-item{
+
+		.h-item {
 			display: inline-block;
 			height: 200rpx;
 			width: 200rpx;
 			border-right: 2rpx solid hotpink;
 		}
 	}
-	
-	.hy-swiper{
-	   height: 400rpx;		
+
+	.hy-swiper {
+		height: 400rpx;
 	}
-	
-	.swiper-image{
+
+	.swiper-image {
 		width: 100%;
 		height: 100%;
 	}
-	
-	
 </style>

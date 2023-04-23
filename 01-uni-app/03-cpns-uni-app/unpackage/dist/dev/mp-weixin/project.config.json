@@ -15,10 +15,11 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "condition": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.27.0",
+  "libVersion": "2.25.3",
   "appid": "touristappid",
   "projectname": "03-cpns-uni-app",
   "condition": {},
