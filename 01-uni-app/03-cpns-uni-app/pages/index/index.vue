@@ -95,7 +95,7 @@
 		// 	display: none;
 		// }
 
-		// 编写全局样式
+		// 编写全局样式 :global & :deep 都是可以的
 		// :global()
 		:deep(.hy-h-scroll .uni-scroll-view::-webkit-scrollbar) {
 			display: none;
